@@ -27,9 +27,9 @@ This repository serves as the companion documentation for my professional Linked
 ## ⚙️ Core Hardware & Interfaces
 
 <div align="center">
-  <img src="assets/_04.png" alt="RF SMA Interfaces" width="45%">
+  <img src="assets/_03.png" alt="RF SMA Interfaces" width="45%">
   &nbsp;
-  <img src="assets/_03.png" alt="Digital and Sync Interfaces" width="45%">
+  <img src="assets/_04.png" alt="Digital and Sync Interfaces" width="45%">
   <p><i>Left: 2x2 MIMO TX/RX Chains. Right: USB 3.0 Pipeline and 10MHz/PPS Sync Ports.</i></p>
 </div>
 
