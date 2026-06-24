@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ANTSDR U220 Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 380px;
+            }
+        }
+        .arch-node {
+            transition: transform 0.2s;
+        }
+        .arch-node:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- 
+    Palette Name: Vibrant Tech Blues
+    Colors: #0A2463 (Deep Navy), #3E92CC (Bright Blue), #00E8FC (Cyan), #D8315B (Accent Red), #F8F9FA (Light Gray)
+    -->
+
+    <!--
+    Explicit Confirmation: NEITHER Mermaid JS NOR SVG were used anywhere in the output.
+    -->
+
+    <!--
+    Plan Narrative & Structure Summary:
+    1. Introduction/Hero: Hook the user with the core identity of the U220 (Professional SDR) and high-level KPIs (Big Numbers).
+    2. Data Overview (Architecture): Break down the physical signal path from RF to Host using a structured HTML diagram.
+    3. Key Trends (Performance): Highlight the data transfer bottleneck solution using a Bar Chart comparing interface speeds.
+    4. In-Depth Analysis (Ecosystem): Detail software compatibility via a structured UI grid.
+    5. Conclusion (Applications): Visualize the primary deployment scenarios using a Composition Donut Chart to show industry utility.
+    -->
+
+    <!--
+    Visualization Choices Summary:
+    - KPIs -> Goal: Inform -> Chosen: Single Big Numbers (HTML/CSS) -> Justification: Immediate impact for core specs. NO SVG.
+    - Architecture Flow -> Goal: Organize/Process -> Chosen: Flow Chart (Structured HTML/CSS Flexbox) -> Justification: Shows signal path clearly without external libraries. NO SVG.
+    - Data Rates -> Goal: Compare -> Chosen: Bar Chart (Chart.js) -> Justification: Best for comparing discrete categorical values (interfaces). NO SVG.
+    - Applications -> Goal: Compare/Composition -> Chosen: Donut Chart (Chart.js) -> Justification: Effectively shows the distribution of use cases across the industry. NO SVG.
+    -->
+
+    <nav class="sticky top-0 z-50 bg-[#0A2463] text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0 font-bold text-xl tracking-wider">
+                    <span class="text-[#00E8FC]">ANT</span>SDR U220
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#overview" class="hover:bg-[#3E92CC] px-3 py-2 rounded-md text-sm font-medium transition-colors">Overview</a>
+                        <a href="#architecture" class="hover:bg-[#3E92CC] px-3 py-2 rounded-md text-sm font-medium transition-colors">Architecture</a>
+                        <a href="#performance" class="hover:bg-[#3E92CC] px-3 py-2 rounded-md text-sm font-medium transition-colors">Performance</a>
+                        <a href="#applications" class="hover:bg-[#3E92CC] px-3 py-2 rounded-md text-sm font-medium transition-colors">Applications</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-gradient-to-br from-[#0A2463] to-[#3E92CC] text-white py-20 px-6">
+        <div class="max-w-5xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-6 drop-shadow-md">The Professional RF Laboratory</h1>
+            <p class="text-lg md:text-2xl font-light text-slate-200 mb-10 max-w-3xl mx-auto">
+                Bridging the gap between educational dongles and enterprise equipment. A highly capable, open-source Software Defined Radio platform built for advanced research and industrial prototyping.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+
+        <section id="overview" class="mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-[#00E8FC] transform transition duration-300 hover:-translate-y-1">
+                    <div class="text-4xl mb-2">&#128225;</div>
+                    <h3 class="text-slate-500 text-sm font-bold uppercase tracking-wider">Frequency Range</h3>
+                    <p class="text-3xl font-extrabold text-[#0A2463] mt-2">70MHz - 6GHz</p>
+                    <p class="text-sm text-slate-600 mt-2">Continuous coverage for FM, Wi-Fi, Sub-6 5G, and ISM bands.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-[#3E92CC] transform transition duration-300 hover:-translate-y-1">
+                    <div class="text-4xl mb-2">&#128200;</div>
+                    <h3 class="text-slate-500 text-sm font-bold uppercase tracking-wider">Instantaneous BW</h3>
+                    <p class="text-3xl font-extrabold text-[#0A2463] mt-2">56 MHz</p>
+                    <p class="text-sm text-slate-600 mt-2">Capture wideband spread-spectrum signals simultaneously.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-[#D8315B] transform transition duration-300 hover:-translate-y-1">
+                    <div class="text-4xl mb-2">&#128260;</div>
+                    <h3 class="text-slate-500 text-sm font-bold uppercase tracking-wider">Transceiver</h3>
+                    <p class="text-3xl font-extrabold text-[#0A2463] mt-2">2x2 MIMO</p>
+                    <p class="text-sm text-slate-600 mt-2">Full-duplex independent TX/RX chains for spatial multiplexing.</p>
+                </div>
+                <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-[#0A2463] transform transition duration-300 hover:-translate-y-1">
+                    <div class="text-4xl mb-2">&#128421;</div>
+                    <h3 class="text-slate-500 text-sm font-bold uppercase tracking-wider">FPGA Logic Cells</h3>
+                    <p class="text-3xl font-extrabold text-[#0A2463] mt-2">215,000</p>
+                    <p class="text-sm text-slate-600 mt-2">Massive Xilinx Artix-7 computational headroom for heavy DSP.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="architecture" class="mb-20 bg-white rounded-2xl shadow-lg p-8">
+            <h2 class="text-3xl font-bold text-[#0A2463] mb-6 border-b-2 border-slate-100 pb-4">Core Signal Architecture</h2>
+            <p class="text-lg text-slate-600 mb-10 max-w-4xl">
+                The processing pipeline is divided into two highly optimized domains. The Analog Devices RF Front-End handles signal acquisition, while the Xilinx FPGA handles intensive baseband routing and digital signal processing, freeing up host CPU resources.
+            </p>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 bg-slate-50 p-8 rounded-xl border border-slate-200">
+                <div class="arch-node flex flex-col items-center bg-white p-6 rounded-lg shadow-md border-2 border-[#D8315B] w-full md:w-64 text-center">
+                    <span class="text-3xl mb-3">&#128142;</span>
+                    <h4 class="font-bold text-lg text-slate-800">RF Front-End</h4>
+                    <p class="text-sm text-slate-500 mt-2 font-medium">AD9361 / AD9363</p>
+                    <p class="text-xs text-slate-600 mt-2">Agile Transceiver handling analog RF to digital IQ conversion.</p>
+                </div>
+                
+                <div class="text-3xl text-[#3E92CC] rotate-90 md:rotate-0">&#10140;</div>
+                
+                <div class="arch-node flex flex-col items-center bg-white p-6 rounded-lg shadow-md border-2 border-[#3E92CC] w-full md:w-64 text-center">
+                    <span class="text-3xl mb-3">&#9881;</span>
+                    <h4 class="font-bold text-lg text-slate-800">Digital Baseband</h4>
+                    <p class="text-sm text-slate-500 mt-2 font-medium">Xilinx Artix-7 FPGA</p>
+                    <p class="text-xs text-slate-600 mt-2">Hardware-level filtering, decimation, and custom modulation.</p>
+                </div>
+
+                <div class="text-3xl text-[#3E92CC] rotate-90 md:rotate-0">&#10140;</div>
+                
+                <div class="arch-node flex flex-col items-center bg-white p-6 rounded-lg shadow-md border-2 border-[#0A2463] w-full md:w-64 text-center">
+                    <span class="text-3xl mb-3">&#128187;</span>
+                    <h4 class="font-bold text-lg text-slate-800">Host Interface</h4>
+                    <p class="text-sm text-slate-500 mt-2 font-medium">USB 3.0 / PCIe</p>
+                    <p class="text-xs text-slate-600 mt-2">High-speed data pipeline back to UHD, GNU Radio, or custom apps.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="performance" class="mb-20 grid grid-cols-1 lg:grid-cols-2 gap-10">
+            <div class="bg-white rounded-2xl shadow-lg p-8">
+                <h2 class="text-3xl font-bold text-[#0A2463] mb-4 border-b-2 border-slate-100 pb-4">Overcoming the Bottleneck</h2>
+                <p class="text-lg text-slate-600 mb-6">
+                    A significant upgrade in the U220 is its host interfacing. To utilize 56 MHz of instantaneous bandwidth without dropping samples (overflows), massive data rates are required. Legacy systems using Gigabit Ethernet choke under this load. The U220's USB 3.0 and expansion interfaces provide the necessary pipeline.
+                </p>
+                <ul class="space-y-4 text-slate-700">
+                    <li class="flex items-start">
+                        <span class="text-[#00E8FC] mr-2 text-xl">&#10003;</span>
+                        <span><strong>USB 3.0 Type-C:</strong> Delivers 5 Gbps, essential for full-bandwidth streaming.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[#00E8FC] mr-2 text-xl">&#10003;</span>
+                        <span><strong>PCIe 2.0 x4 & SFP:</strong> Available via expansion boards for ultra-low latency.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-[#00E8FC] mr-2 text-xl">&#10003;</span>
+                        <span><strong>Absolute Coherence:</strong> On-board GPS, 10MHz, and PPS inputs prevent phase drift across distributed systems.</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col">
+                <h3 class="text-xl font-bold text-slate-800 mb-4 text-center">Interface Bandwidth Comparison (Mbps)</h3>
+                <div class="chart-container flex-grow">
+                    <canvas id="bandwidthChart"></canvas>
+                </div>
+                <p class="text-xs text-center text-slate-500 mt-4">Higher values indicate greater capacity for wideband IQ data transfer without sample loss.</p>
+            </div>
+        </section>
+
+        <section id="applications" class="mb-20">
+            <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+                
+                <div class="lg:col-span-2 bg-white rounded-2xl shadow-lg p-8 flex flex-col justify-center">
+                    <h2 class="text-3xl font-bold text-[#0A2463] mb-6 border-b-2 border-slate-100 pb-4">Primary Deployments</h2>
+                    <p class="text-lg text-slate-600 mb-6">
+                        Because of its balance of price, wideband performance, and MIMO architecture, the U220 is widely deployed across telecommunications, defense, and academia.
+                    </p>
+                    <div class="chart-container">
+                        <canvas id="applicationsChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-slate-800 text-white rounded-xl p-6 shadow-md border-l-4 border-[#00E8FC]">
+                        <h4 class="font-bold text-lg mb-2">Cellular Testbeds</h4>
+                        <p class="text-sm text-slate-300">Prototyping 4G LTE and 5G NR base stations (eNodeB/gNodeB) and user equipment using stacks like srsRAN.</p>
+                    </div>
+                    <div class="bg-slate-800 text-white rounded-xl p-6 shadow-md border-l-4 border-[#D8315B]">
+                        <h4 class="font-bold text-lg mb-2">SIGINT & Counter-UAS</h4>
+                        <p class="text-sm text-slate-300">Monitoring ISM bands to detect, analyze, and mitigate drone telemetry and unauthorized video links.</p>
+                    </div>
+                    <div class="bg-slate-800 text-white rounded-xl p-6 shadow-md border-l-4 border-[#3E92CC]">
+                        <h4 class="font-bold text-lg mb-2">Radar Research</h4>
+                        <p class="text-sm text-slate-300">Utilizing the 10MHz/PPS sync capabilities to build multi-node direction-finding (Angle of Arrival) systems.</p>
+                    </div>
+                    <div class="bg-slate-800 text-white rounded-xl p-6 shadow-md border-l-4 border-[#FFA600]">
+                        <h4 class="font-bold text-lg mb-2">Electronic Warfare</h4>
+                        <p class="text-sm text-slate-300">Generating reactive jamming waveforms or simulating GPS spoofing to test the resilience of autonomous systems.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-[#0A2463] text-white rounded-2xl shadow-xl p-10 text-center">
+            <h2 class="text-3xl font-bold mb-4">Native Software Integration</h2>
+            <p class="text-lg text-slate-300 max-w-3xl mx-auto mb-8">
+                The U220 excels by integrating into established, industry-standard ecosystems out of the box via the <strong>USRP Hardware Driver (UHD)</strong>.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <span class="px-5 py-2 bg-white text-[#0A2463] font-bold rounded-full shadow-sm">GNU Radio</span>
+                <span class="px-5 py-2 bg-white text-[#0A2463] font-bold rounded-full shadow-sm">MATLAB</span>
+                <span class="px-5 py-2 bg-white text-[#0A2463] font-bold rounded-full shadow-sm">Python (NumPy/PyTorch)</span>
+                <span class="px-5 py-2 bg-white text-[#0A2463] font-bold rounded-full shadow-sm">srsRAN</span>
+                <span class="px-5 py-2 bg-white text-[#0A2463] font-bold rounded-full shadow-sm">OpenWifi</span>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-900 text-slate-400 py-8 text-center text-sm mt-12">
+        <p>Data Visualization derived from "The ANTSDR U220: A Comprehensive Introduction" specifications.</p>
+    </footer>
+
+    <script>
+        const wrapLabel = (text) => {
+            if (text.length <= 16) return text;
+            const words = text.split(' ');
+            const lines = [];
+            let currentLine = '';
+            words.forEach(word => {
+                if ((currentLine + word).length > 16) {
+                    if (currentLine) {
+                        lines.push(currentLine.trim());
+                    }
+                    currentLine = word + ' ';
+                } else {
+                    currentLine += word + ' ';
+                }
+            });
+            if (currentLine) {
+                lines.push(currentLine.trim());
+            }
+            return lines;
+        };
+
+        const globalTooltipConfig = {
+            tooltip: {
+                callbacks: {
+                    title: function(tooltipItems) {
+                        const item = tooltipItems[0];
+                        let label = item.chart.data.labels[item.dataIndex];
+                        if (Array.isArray(label)) {
+                            return label.join(' ');
+                        } else {
+                            return label;
+                        }
+                    }
+                }
+            }
+        };
+
+        const bwLabelsRaw = ["Legacy Gigabit Ethernet", "Legacy USB 2.0", "ANTSDR U220 USB 3.0", "Expansion PCIe 2.0 x4"];
+        const bwLabels = bwLabelsRaw.map(wrapLabel);
+        const bwData = [1000, 480, 5000, 16000];
+
+        const ctxBw = document.getElementById('bandwidthChart').getContext('2d');
+        new Chart(ctxBw, {
+            type: 'bar',
+            data: {
+                labels: bwLabels,
+                datasets: [{
+                    label: 'Max Theoretical Bandwidth (Mbps)',
+                    data: bwData,
+                    backgroundColor: [
+                        '#94A3B8', 
+                        '#CBD5E1', 
+                        '#3E92CC', 
+                        '#0A2463'  
+                    ],
+                    borderRadius: 4,
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    ...globalTooltipConfig
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: { color: '#E2E8F0' },
+                        title: { display: true, text: 'Megabits per second (Mbps)' }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: { autoSkip: false, maxRotation: 0, font: { size: 11 } }
+                    }
+                }
+            }
+        });
+
+        const appLabelsRaw = ["Cellular Network Testbeds", "Signal Intelligence & Counter-UAS", "Phased Array & Radar", "Electronic Warfare Prototyping", "Academic DSP Research"];
+        const appLabels = appLabelsRaw.map(wrapLabel);
+        const appData = [25, 25, 20, 15, 15];
+
+        const ctxApp = document.getElementById('applicationsChart').getContext('2d');
+        new Chart(ctxApp, {
+            type: 'doughnut',
+            data: {
+                labels: appLabels,
+                datasets: [{
+                    data: appData,
+                    backgroundColor: [
+                        '#0A2463', 
+                        '#D8315B', 
+                        '#3E92CC', 
+                        '#FFA600', 
+                        '#00E8FC'  
+                    ],
+                    borderWidth: 2,
+                    borderColor: '#ffffff',
+                    hoverOffset: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                cutout: '65%',
+                plugins: {
+                    legend: {
+                        position: 'right',
+                        labels: {
+                            font: { size: 12 },
+                            usePointStyle: true,
+                            padding: 20
+                        }
+                    },
+                    ...globalTooltipConfig
+                }
+            }
+        });
+    </script>
+</body>
+</html>
