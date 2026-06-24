@@ -5,7 +5,7 @@
 > **Date:** June 2026
 
 <p align="center">
-  <img src="assets/post01.png" alt="ANTSDR U220 hardware overview" width="85%">
+  <img src="Posts/assets/post01.png" alt="ANTSDR U220 hardware overview" width="85%">
 </p>
 
 There is a massive gap in the Software Defined Radio market right now between $150 educational dongles and $2,000+ enterprise lab equipment. 
@@ -34,7 +34,7 @@ Because of the wide bandwidth and FPGA architecture, this platform is perfectly 
 5.  **Hardware Acceleration:** Moving digital signal processing directly onto the FPGA via custom Verilog/VHDL.
 
 <p align="center">
-  <img src="assets/_02.png" alt="ANTSDR U220 hardware setup" width="85%">
+  <img src="Post_01/assets/_02.png" alt="ANTSDR U220 hardware setup" width="85%">
 </p>
 
 ---
@@ -46,20 +46,3 @@ Over the next few weeks, I’ll share tutorials, Python/C++ snippets, and archit
 **Make sure to star the repo to follow along!**
 
 <br>
-
----
-
-## 📝 LinkedIn-Ready Caption
-*(Copy and paste the text below into your LinkedIn post)*
-
-> There is a massive gap in the Software Defined Radio market right now between $150 educational dongles and $2,000+ enterprise lab equipment. 
-> 
-> If you want to prototype serious RF systems, you need something in the middle. Enter the ANTSDR U220. 
->
-> It matches the specs of the industry-standard Ettus USRP B210 but offers a much more accessible entry point for researchers, cellular networks (srsRAN), and RF integration engineers.
-> 
-> Over the next few weeks, I’ll be sharing tutorials, code snippets, and architecture breakdowns on how to push this hardware to its limits. I am compiling all scripts and guides in a GitHub repository (link in the comments!).
->
-> What is your current go-to SDR for mid-tier prototyping? Let me know below. 👇
->
-> #SDR #RFEngineering #ANTSDR #Telecommunications #FPGA #DSP #EmbeddedSystems #WirelessCommunications
