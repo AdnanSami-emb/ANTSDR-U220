@@ -2,7 +2,7 @@
 
 # 📡 ANTSDR U220: Integration & Prototyping Guides
 
-<img src="assets/post01.jpg" alt="ANTSDR U220 bare board" width="80%">
+<img src="assets/post01.png" alt="ANTSDR U220 bare board" width="80%">
 
 <br>
 
@@ -27,9 +27,9 @@ This repository serves as the companion documentation for my professional Linked
 ## ⚙️ Core Hardware & Interfaces
 
 <div align="center">
-  <img src="assets/Screenshot%202026-06-23%20184059.png" alt="RF SMA Interfaces" width="45%">
+  <img src="assets/_04.png" alt="RF SMA Interfaces" width="45%">
   &nbsp;
-  <img src="assets/Screenshot%202026-06-23%20184048.jpg" alt="Digital and Sync Interfaces" width="45%">
+  <img src="_03.png" alt="Digital and Sync Interfaces" width="45%">
   <p><i>Left: 2x2 MIMO TX/RX Chains. Right: USB 3.0 Pipeline and 10MHz/PPS Sync Ports.</i></p>
 </div>
 
