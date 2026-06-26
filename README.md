@@ -2,7 +2,7 @@
 
 # 📡 ANTSDR U220: Integration & Prototyping Guides
 
-<img src="assets/post01.png" alt="ANTSDR U220 bare board" width="80%">
+<img src="assets\post01.png" alt="ANTSDR U220 bare board" width="80%">
 
 <br>
 
@@ -27,9 +27,9 @@ This repository serves as the companion documentation for my professional Linked
 ## ⚙️ Core Hardware & Interfaces
 
 <div align="center">
-  <img src="assets/_03.png" alt="RF SMA Interfaces" width="45%">
+  <img src="assets\_03.png" alt="RF SMA Interfaces" width="45%">
   &nbsp;
-  <img src="assets/_04.png" alt="Digital and Sync Interfaces" width="45%">
+  <img src="assets\_04.png" alt="Digital and Sync Interfaces" width="45%">
   <p><i>Left: 2x2 MIMO TX/RX Chains. Right: USB 3.0 Pipeline and 10MHz/PPS Sync Ports.</i></p>
 </div>
 
@@ -47,7 +47,7 @@ The documentation and scripts in this repository are built around the following 
 To process **56 MHz of instantaneous bandwidth** without dropping samples, the U220 relies on a highly optimized signal path, offloading heavy digital signal processing from the host CPU to the FPGA.
 
 <p align="center">
-  <img src="assets/_02.png" alt="ANTSDR U220 Block Diagram" width="85%">
+  <img src="assets\_02.png" alt="ANTSDR U220 Block Diagram" width="85%">
 </p>
 
 * **RF Front-End:** The AD9361 handles analog-to-digital IQ conversion.

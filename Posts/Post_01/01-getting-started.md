@@ -5,7 +5,7 @@
 > **Date:** June 2026
 
 <p align="center">
-  <img src="Posts/assets/post01.png" alt="ANTSDR U220 hardware overview" width="85%">
+  <img src="Posts\assets\post01.png" alt="ANTSDR U220 hardware overview" width="85%">
 </p>
 
 There is a massive gap in the Software Defined Radio market right now between $150 educational dongles and $2,000+ enterprise lab equipment. 
@@ -34,7 +34,7 @@ Because of the wide bandwidth and FPGA architecture, this platform is perfectly 
 5.  **Hardware Acceleration:** Moving digital signal processing directly onto the FPGA via custom Verilog/VHDL.
 
 <p align="center">
-  <img src="Post_01/assets/_02.png" alt="ANTSDR U220 hardware setup" width="85%">
+  <img src="Post_01\assets\_02.png" alt="ANTSDR U220 hardware setup" width="85%">
 </p>
 
 ---
@@ -42,7 +42,5 @@ Because of the wide bandwidth and FPGA architecture, this platform is perfectly 
 ## ⏭️ Next in this Series
 
 Over the next few weeks, I’ll share tutorials, Python/C++ snippets, and architecture breakdowns for integrating and pushing this hardware to its limits. I’m collecting all scripts and guides right here in this GitHub repository. 
-
-**Make sure to star the repo to follow along!**
 
 <br>
